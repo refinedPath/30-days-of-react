@@ -2,16 +2,16 @@
 //  Fetch API (Promise chaining & async/await) //
 /////////////////////////////////////////////////
 
-// fetch('https://jsonplaceholder.typicode.com/posts/9999999')
-//   .then(response => {
-//     if (!response.ok) {
-//       throw new Error(`HTTP status code ${response.status}`);
-//     } else {
-//       return response.json()
-//     }
-//   })
-//   .then(console.log)
-//   .catch(console.log);
+fetch('https://jsonplaceholder.typicode.com/posts/9999999')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP status code ${response.status}`);
+    } else {
+      return response.json()
+    }
+  })
+  .then(console.log)
+  .catch(console.log);
 
 //////////
 
@@ -52,17 +52,17 @@ const postObj = {
       body: postDataStr
     };
 
-// fetch(
-//     'https://jsonplaceholder.typicode.com/posts',postObj)
-//     .then(response => {
-//       if (!response.ok) {
-//         throw new Error(`HTTP status code ${response.status}`);
-//       } else {
-//         return response.json()
-//       }
-//     })
-//     .then(console.log)
-//     .catch(console.log);
+fetch(
+    'https://jsonplaceholder.typicode.com/posts',postObj)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP status code ${response.status}`);
+      } else {
+        return response.json()
+      }
+    })
+    .then(console.log)
+    .catch(console.log);
 
 //////////
 
