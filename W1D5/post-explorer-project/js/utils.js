@@ -5,3 +5,12 @@ export function filterPosts(posts, searchStr) {
 
   return filteredPosts;
 }
+
+export function debounce(cb, delay) {
+  let timerId;
+
+  return () => {
+    clearTimeout(timerId);
+    timerId = setTimeout(cb, delay)
+  };
+}
